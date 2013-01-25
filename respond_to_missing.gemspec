@@ -1,9 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-lib = File.expand_path('../lib/', __FILE__)
-$:.unshift lib unless $:.include?(lib)
-
-require 'respond_to_missing/version'
+require File.expand_path('../lib/respond_to_missing/version', __FILE__)
 require 'date'
 
 Gem::Specification.new do |s|
@@ -13,7 +10,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
 
   s.summary     = 'Defines Object#respond_to_missing? and patches Object#respond_to?'
-  s.description = 'Defines Object#respond_to_missing? and patches Object#respond_to? unless this functionality has already been implemented (ruby v1.9+)'
+  s.description = 'Defines Object#respond_to_missing? and patches Object#respond_to? unless this functionality has already been implemented (ruby versions 1.9+)'
 
   s.author   = 'Sean Huber'
   s.email    = 'shuber@huberry.com'
