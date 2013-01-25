@@ -1,7 +1,7 @@
 require 'rake/testtask'
 begin
   require 'rdoc/task'
-rescue RuntimeError
+rescue LoadError
   require 'rake/rdoctask'
 end
 
