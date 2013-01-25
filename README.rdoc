@@ -1,6 +1,6 @@
 = respond_to_missing
 
-Defines <tt>{Object#respond_to_missing?}[http://www.ruby-doc.org/core/classes/Object.html#M001006]</tt> and patches <tt>{Object#respond_to?}[http://www.ruby-doc.org/core/classes/Object.html#M001005]</tt> unless this functionality has already been implemented (ruby v1.9+)
+Defines <tt>{Object#respond_to_missing?}[http://www.ruby-doc.org/core/classes/Object.html#M001006]</tt> and patches <tt>{Object#respond_to?}[http://www.ruby-doc.org/core/classes/Object.html#M001005]</tt> unless this functionality has already been implemented (ruby versions 1.9+)
 
 
 == Installation
@@ -8,10 +8,21 @@ Defines <tt>{Object#respond_to_missing?}[http://www.ruby-doc.org/core/classes/Ob
   gem install respond_to_missing
 
 
-== Note on Patches/Pull Requests
+== Usage
 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a future version unintentionally.
-* Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+Define <tt>respond_to_missing?</tt> whenever an object overrides <tt>method_missing</tt>
+
+  class User
+    def method_missing(method_name, *args)
+      method_name == :test_method ? true : super
+    end
+
+    def respond_to_missing?(method_name, include_super)
+      method_name == :test_method || super
+    end
+  end
+
+
+== Testing
+
+  rake
