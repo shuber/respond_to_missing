@@ -11,7 +11,7 @@ task :default => :test
 desc 'Test the respond_to_missing gem'
 Rake::TestTask.new(:test) do |t|
   t.libs.push 'lib'
-  t.pattern = 'test/**/*_test.rb'
+  t.pattern = 'test/*_test.rb'
 end
 
 desc 'Generate documentation for the respond_to_missing gem'
