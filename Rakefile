@@ -1,8 +1,8 @@
 require 'rake/testtask'
 begin
-  require 'rake/rdoctask'
-rescue RuntimeError
   require 'rdoc/task'
+rescue RuntimeError
+  require 'rake/rdoctask'
 end
 
 desc 'Default: run unit tests'
@@ -12,7 +12,6 @@ desc 'Test the respond_to_missing gem'
 Rake::TestTask.new(:test) do |t|
   t.libs += ['lib', 'test']
   t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
 end
 
 desc 'Generate documentation for the respond_to_missing gem'
