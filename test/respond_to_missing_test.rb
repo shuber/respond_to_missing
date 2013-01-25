@@ -14,7 +14,7 @@ class RespondToMissingTest < Test::Unit::TestCase
   end
 
   def test_should_respond_to_respond_to_missing
-    assert respond_to?(:respond_to_missing?)
+    assert Object.new.respond_to?(:respond_to_missing?)
   end
 
   def test_should_pass_failing_respond_to_calls_to_respond_to_missing
