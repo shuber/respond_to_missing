@@ -3,6 +3,7 @@
 {<img src="https://secure.travis-ci.org/shuber/respond_to_missing.png"/>}[http://travis-ci.org/shuber/respond_to_missing]
 {<img src="https://d25lcipzij17d.cloudfront.net/badge.png?v=0.0.1"/>}[http://rubygems.org/gems/respond_to_missing]
 {<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/shuber/respond_to_missing]
+{<img src="https://cruel-carlota.pagodabox.com/7fcd2a2ed01540dbc9ba52a1af81cace" />}[http://githalytics.com/shuber/respond_to_missing]
 
 Defines <tt>{Object#respond_to_missing?}[http://www.ruby-doc.org/core/classes/Object.html#M001006]</tt> and patches <tt>{Object#respond_to?}[http://www.ruby-doc.org/core/classes/Object.html#M001005]</tt> unless this functionality has already been implemented (ruby versions 1.9+)
 
